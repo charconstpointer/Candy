@@ -1,8 +1,6 @@
-using System.Globalization;
 using System.Threading.Tasks;
+using Candy.Domain.Models;
 using Microsoft.AspNetCore.SignalR;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 namespace Candy.Hubs
 {
@@ -25,13 +23,4 @@ namespace Candy.Hubs
             await Clients.Groups(roomName).SendAsync("receiveMessage", message);
         }
     }
-
-    public partial class Message
-    {
-        [JsonProperty("name")]
-        public string Name { get; set; }
-        [JsonProperty("body")]
-        public string Body { get; set; }
-    }
-    
 }
