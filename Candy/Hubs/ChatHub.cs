@@ -9,6 +9,7 @@ namespace Candy.Hubs
     {
         public async Task SendMessage(Message messageBody)
         {
+            
             await Clients.All.SendAsync("receiveMessage", messageBody);
         }
 
