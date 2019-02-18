@@ -46,7 +46,7 @@ namespace Candy
             //        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
             //    RequestPath = "/client"
             //});
-            app.Run(async (context) => { await context.Response.WriteAsync("Hello World!"); });
+            app.Run(async context => { await context.Response.WriteAsync("/chat"); });
         }
     }
 }
