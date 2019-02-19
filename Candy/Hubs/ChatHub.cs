@@ -7,9 +7,9 @@ namespace Candy.Hubs
     // ReSharper disable once ClassNeverInstantiated.Global
     public class ChatHub : Hub
     {
-        public async Task SendMessage(Message messageBody)
+        public async Task SendMessage(Message message)
         {
-            await Clients.All.SendAsync("receiveMessage", messageBody);
+            await Clients.All.SendAsync("receiveMessage", message);
         }
 
         public async Task JoinRoom(string nick, string roomName)
