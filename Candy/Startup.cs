@@ -15,7 +15,10 @@ namespace Candy
                 {
                     builder.AllowAnyMethod()
                         .AllowAnyHeader()
+                        .WithOrigins("https://localhost:3000")
                         .WithOrigins("http://localhost:3000")
+                        .WithOrigins("http://testcore.polskieradio.pl")
+                        .WithOrigins("https://testcore.polskieradio.pl")
                         .AllowCredentials();
                 }));
             services.AddSignalR(o =>
@@ -27,9 +30,19 @@ namespace Candy
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseStaticFiles();
             app.UseCors("CorsPolicy");
             app.UseSignalR(routes => { routes.MapHub<ChatHub>("/chat"); });
-            app.Run(async (context) => { await context.Response.WriteAsync("Hello World!"); });
+             // For the wwwroot folder
+
+
+            //app.UseDirectoryBrowser(new DirectoryBrowserOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
+            //    RequestPath = "/client"
+            //});
+            app.Run(async context => { await context.Response.WriteAsync("/chat"); });
         }
     }
 }

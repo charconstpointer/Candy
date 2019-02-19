@@ -11,4 +11,21 @@
         <PackageReference Include="Microsoft.AspNetCore.SignalR.StackExchangeRedis" Version="1.1.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\build\asset-manifest.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\favicon.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\index.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\manifest.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\precache-manifest.c7182fedd1fe69e3de247263976c417f.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\service-worker.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\css\main.3c636b3e.chunk.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\css\main.3c636b3e.chunk.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\1.00f76014.chunk.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\1.00f76014.chunk.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\main.d4f25e66.chunk.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\main.d4f25e66.chunk.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\runtime~main.229c360f.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\runtime~main.229c360f.js.map" />
+    </ItemGroup>
+
 </Project>
