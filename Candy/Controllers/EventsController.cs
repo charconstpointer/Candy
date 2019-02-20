@@ -21,7 +21,7 @@ namespace Candy.Controllers
         public async Task Notify([FromBody] string description)
         {
             await _context.Clients.All.SendAsync("receiveMessage", new Message {Body = description ,Name = "Server"});
-            Ok();
+            Ok("");
         }
     }
 }
