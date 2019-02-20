@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
+
 
 namespace Candy
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options => options.AddPolicy("CorsPolicy", 
@@ -17,12 +17,15 @@ namespace Candy
                 {
                     builder.AllowAnyMethod()
                         .AllowAnyHeader()
+                        .WithOrigins("https://localhost")
+                        .WithOrigins("http://localhost")
                         .WithOrigins("https://localhost:3000")
                         .WithOrigins("http://localhost:3000")
                         .WithOrigins("http://testcore.polskieradio.pl")
                         .WithOrigins("https://testcore.polskieradio.pl")
                         .AllowCredentials();
                 }));
+            services.AddMvc();
             services.AddSignalR(o =>
             {
                 o.EnableDetailedErrors = true;
@@ -32,6 +35,7 @@ namespace Candy
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseMvc();
             app.UseStaticFiles();
             app.UseCors("CorsPolicy");
             app.UseSignalR(routes => { routes.MapHub<ChatHub>("/chat"); });
