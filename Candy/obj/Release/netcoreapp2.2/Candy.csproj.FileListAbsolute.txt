@@ -1,0 +1,14 @@
+C:\Users\fml\RiderProjects\Candy\Candy\bin\Release\netcoreapp2.2\Candy.deps.json
+C:\Users\fml\RiderProjects\Candy\Candy\bin\Release\netcoreapp2.2\Candy.runtimeconfig.json
+C:\Users\fml\RiderProjects\Candy\Candy\bin\Release\netcoreapp2.2\Candy.runtimeconfig.dev.json
+C:\Users\fml\RiderProjects\Candy\Candy\bin\Release\netcoreapp2.2\Candy.dll
+C:\Users\fml\RiderProjects\Candy\Candy\bin\Release\netcoreapp2.2\Candy.pdb
+C:\Users\fml\RiderProjects\Candy\Candy\obj\Release\netcoreapp2.2\Candy.csprojAssemblyReference.cache
+C:\Users\fml\RiderProjects\Candy\Candy\obj\Release\netcoreapp2.2\Candy.csproj.CoreCompileInputs.cache
+C:\Users\fml\RiderProjects\Candy\Candy\obj\Release\netcoreapp2.2\Candy.RazorAssemblyInfo.cache
+C:\Users\fml\RiderProjects\Candy\Candy\obj\Release\netcoreapp2.2\Candy.RazorAssemblyInfo.cs
+C:\Users\fml\RiderProjects\Candy\Candy\obj\Release\netcoreapp2.2\Candy.AssemblyInfoInputs.cache
+C:\Users\fml\RiderProjects\Candy\Candy\obj\Release\netcoreapp2.2\Candy.AssemblyInfo.cs
+C:\Users\fml\RiderProjects\Candy\Candy\obj\Release\netcoreapp2.2\Candy.RazorTargetAssemblyInfo.cache
+C:\Users\fml\RiderProjects\Candy\Candy\obj\Release\netcoreapp2.2\Candy.dll
+C:\Users\fml\RiderProjects\Candy\Candy\obj\Release\netcoreapp2.2\Candy.pdb
