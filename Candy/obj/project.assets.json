@@ -3018,6 +3018,19 @@
           }
         }
       },
+      "SqlTableDependency/8.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.0",
+          "System.Data.SqlClient": "4.3.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/TableDependency.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/TableDependency.SqlClient.dll": {}
+        }
+      },
       "StackExchange.Redis/2.0.513": {
         "type": "package",
         "dependencies": {
@@ -7828,6 +7841,21 @@
         "version.txt"
       ]
     },
+    "SqlTableDependency/8.5.3": {
+      "sha512": "i5H96bVgRpmVjeHS0dflzpAg1/UfZaOgrzenm3O1c9vIIHwzOw5amaj0oLMaiK0ajIU0TMwkYbPTEFRWiI7t7Q==",
+      "type": "package",
+      "path": "sqltabledependency/8.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "lib/net451/TableDependency.SqlClient.dll",
+        "lib/netcoreapp2.0/TableDependency.SqlClient.dll",
+        "lib/netstandard2.0/TableDependency.SqlClient.dll",
+        "sqltabledependency.8.5.3.nupkg.sha512",
+        "sqltabledependency.nuspec"
+      ]
+    },
     "StackExchange.Redis/2.0.513": {
       "sha512": "/YpnZ9r8VM+yyg7UxStmCoyOyhMDgQ7IkGo64HwPMtcIcgUgbZSxRPY/2h/rOY6y/quEhl3yGiD9Lt0INOd8pA==",
       "type": "package",
@@ -12349,7 +12377,8 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.AspNetCore.SignalR.StackExchangeRedis >= 1.1.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "SqlTableDependency >= 8.5.3"
     ]
   },
   "packageFolders": {
@@ -12413,6 +12442,10 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "SqlTableDependency": {
+            "target": "Package",
+            "version": "[8.5.3, )"
           }
         },
         "imports": [

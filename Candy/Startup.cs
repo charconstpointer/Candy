@@ -15,21 +15,25 @@ namespace Candy
                 {
                     builder.AllowAnyMethod()
                         .AllowAnyHeader()
+                        .WithOrigins("https://localhost")
+                        .WithOrigins("http://localhost")
                         .WithOrigins("https://localhost:3000")
                         .WithOrigins("http://localhost:3000")
                         .WithOrigins("http://testcore.polskieradio.pl")
                         .WithOrigins("https://testcore.polskieradio.pl")
                         .AllowCredentials();
                 }));
+            services.AddMvc();
             services.AddSignalR(o =>
             {
                 o.EnableDetailedErrors = true;
-            }).AddStackExchangeRedis("localhost:6379"); //redis connection string(localhost for production only)
+            }); //.AddStackExchangeRedis("localhost:4444"); //redis connection string(localhost for production only)
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseMvc();
             app.UseStaticFiles();
             app.UseCors("CorsPolicy");
             app.UseSignalR(routes => { routes.MapHub<ChatHub>("/chat"); });
