@@ -23,11 +23,12 @@ namespace Candy
                         .WithOrigins("https://testcore.polskieradio.pl")
                         .AllowCredentials();
                 }));
-            services.AddMvc();
             services.AddSignalR(o =>
             {
                 o.EnableDetailedErrors = true;
-            }); //.AddStackExchangeRedis("localhost:4444"); //redis connection string(localhost for production only)
+            }).AddMessagePackProtocol(); //.AddStackExchangeRedis("localhost:4444"); //redis connection string(localhost for production only)
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
