@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Candy.Domain.Models;
 using Microsoft.AspNetCore.SignalR;
+using TableDependency.SqlClient.Base;
 
 namespace Candy.Hubs
 {

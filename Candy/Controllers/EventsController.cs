@@ -10,18 +10,26 @@ namespace Candy.Controllers
     [Route("api/[controller]")]
     public class EventsController : ControllerBase
     {
-        private readonly IHubContext<ChatHub> _context;
+        private readonly IHubContext<ChatHub> _hubContext;
 
-        public EventsController(IHubContext<ChatHub> context)
+        public EventsController(IHubContext<ChatHub> hubContext)
         {
-            _context = context;
+            _hubContext = hubContext;
+        }
+
+        [HttpGet]
+        public async Task ww()
+        {
+            await _hubContext.Clients.All.SendAsync("receiveMessage",
+                new Message {Body = "Dsa", Name = "Server"});
         }
 
         [HttpPost]
         public async Task Notify([FromBody] string description)
         {
-            await _context.Clients.All.SendAsync("receiveMessage", new Message {Body = description ,Name = "Server"});
-            Ok("");
+            await _hubContext.Clients.All.SendAsync("receiveMessage",
+                new Message {Body = description, Name = "Server"});
+//            --urls=http://0.0.0.0:5001
         }
     }
 }

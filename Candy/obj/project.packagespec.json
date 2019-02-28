@@ -46,6 +46,10 @@
           "target": "Package",
           "version": "[2.2.0, )",
           "autoReferenced": true
+        },
+        "SqlTableDependency": {
+          "target": "Package",
+          "version": "[8.5.3, )"
         }
       },
       "imports": [

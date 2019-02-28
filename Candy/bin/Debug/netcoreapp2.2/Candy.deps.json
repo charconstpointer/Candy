@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "371c819955284d242c719301653e78a781a9dadb"
+    "signature": "62cc07151c4752bfda4a4cb908a60cf60e8e943f"
   },
   "compilationOptions": {
     "defines": [
@@ -27,7 +27,8 @@
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.AspNetCore.SignalR.StackExchangeRedis": "1.1.0",
-          "Microsoft.NETCore.App": "2.2.0"
+          "Microsoft.NETCore.App": "2.2.0",
+          "SqlTableDependency": "8.5.3"
         },
         "runtime": {
           "Candy.dll": {}
@@ -255,6 +256,21 @@
         },
         "compile": {
           "lib/netcoreapp2.1/Pipelines.Sockets.Unofficial.dll": {}
+        }
+      },
+      "SqlTableDependency/8.5.3": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.5.0",
+          "System.Data.SqlClient": "4.6.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/TableDependency.SqlClient.dll": {
+            "assemblyVersion": "8.5.3.0",
+            "fileVersion": "8.5.3.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.0/TableDependency.SqlClient.dll": {}
         }
       },
       "StackExchange.Redis/2.0.513": {
@@ -3417,6 +3433,13 @@
       "sha512": "sha512-hTcF8OrTXJYFkJuu3ZwPLnXZdhHrd5CIGEJSZxXLdsX7lDApssIq5XpV8/Lobxu99nmVE6BMZKFnHDg0U29IEA==",
       "path": "pipelines.sockets.unofficial/1.0.7",
       "hashPath": "pipelines.sockets.unofficial.1.0.7.nupkg.sha512"
+    },
+    "SqlTableDependency/8.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i5H96bVgRpmVjeHS0dflzpAg1/UfZaOgrzenm3O1c9vIIHwzOw5amaj0oLMaiK0ajIU0TMwkYbPTEFRWiI7t7Q==",
+      "path": "sqltabledependency/8.5.3",
+      "hashPath": "sqltabledependency.8.5.3.nupkg.sha512"
     },
     "StackExchange.Redis/2.0.513": {
       "type": "package",
