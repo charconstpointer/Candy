@@ -29,7 +29,7 @@ namespace Candy
             services.AddSignalR(o =>
             {
                 o.EnableDetailedErrors = true;
-            });
+            }).AddStackExchangeRedis("localhost:6379"); //redis connection string(localhost for production only)
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
